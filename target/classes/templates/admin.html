@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+</head>
+<!--<script>-->
+<!--    function tvClick() {-->
+<!--        var x=document.getElementById("tv").value;-->
+<!--        //window.location.href="http://localhost:8080/search?id="+x;-->
+<!--        window.location.href="search?id="+x;-->
+<!--    }-->
+<!--</script>-->
+<body>
+
+
+
+
+
+<!--<div th:width="300px" th:height="50px">-->
+<!--    <input th:width="300px" th:height="50px" id="tv" th:value="${keyValue}">  </input>   <button id="btn" onclick="tvClick()">查询</button>-->
+<!--</div>-->
+
+
+<a href="/delete">清空</a>
+<table border="1">
+    <tr>
+        <th>时间</th>
+        <th>姓名</th>
+        <th>意见或订货需求</th>
+        <th>邮箱</th>
+        <th>手机号码</th>
+    </tr>
+    <tr th:each="user:${users}">
+        <td><span th:text="${#dates.format(user.gmtCreate, 'yyyy-MM-dd HH:mm')}"></span></td>
+        <td><span th:text="${user.name}"></span></td>
+        <td><span th:text="${user.text}"></span></td>
+        <td><span th:text="${user.email}"></span></td>
+        <td><span th:text="${user.phonenumber}"></span></td>
+<!--    <td><a th:href="@{/del(user_id=${user.id})}"> delete </a></td>-->
+    </tr>
+</table>
+
+</body>
+</html>

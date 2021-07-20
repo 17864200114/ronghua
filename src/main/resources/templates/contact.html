@@ -124,8 +124,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="alert alert-danger col-lg-4 col-md-12 col-sm-12 col-xs-12 col-lg-offset-4"
-                                 th:text="${error}" th:if="${error!=null}" style="margin-top: 10px">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="form-group">
+                                    <div class="alert alert-danger"
+                                         th:text="${error}" th:if="${error!=null}" style="margin-top: 5px">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

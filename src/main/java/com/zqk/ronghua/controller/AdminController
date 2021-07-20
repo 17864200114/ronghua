@@ -1,0 +1,28 @@
+//package com.zqk.ronghua.controller;
+//
+//import com.zqk.ronghua.service.AdminService;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.ui.Model;
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//
+//
+//@Controller
+//public class AdminController {
+//    @Autowired
+//    private AdminService adminService;
+//
+//    @GetMapping("/test")
+//    public String test() {
+//        return "test";
+//    }
+//
+//    @GetMapping("/admin")
+//    public String admin(Model model){
+//        System.out.println("hello world!");
+//        model.addAttribute("users" ,adminService.findAll());
+//        return "admin";
+//    }
+//}
+//
